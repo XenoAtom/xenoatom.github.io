@@ -1,0 +1,225 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 512 512" role="img" aria-label="XenoAtom logo">
+  <defs>
+    <!-- Outer rim -->
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#124B6A"/>
+      <stop offset="0.30" stop-color="#2D7EBA"/>
+      <stop offset="0.55" stop-color="#246EA4"/>
+      <stop offset="0.80" stop-color="#1D5E8E"/>
+      <stop offset="1" stop-color="#0F3554"/>
+    </linearGradient>
+
+    <!-- Rim inner bevel highlight -->
+    <radialGradient id="rimHighlight" cx="40%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#65C5FF" stop-opacity="0.48"/>
+      <stop offset="0.5" stop-color="#1A5278" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Inner background -->
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#184277"/>
+      <stop offset="0.55" stop-color="#102F5C"/>
+      <stop offset="1" stop-color="#081E3B"/>
+    </radialGradient>
+
+    <!-- Rays -->
+    <linearGradient id="rayCyan" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#18B7FF" stop-opacity="0.0"/>
+      <stop offset="0.25" stop-color="#7CFFFB" stop-opacity="0.60"/>
+      <stop offset="0.60" stop-color="#7CFFFB" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#18B7FF" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="rayOrange" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFD166" stop-opacity="0.0"/>
+      <stop offset="0.25" stop-color="#FFA033" stop-opacity="0.55"/>
+      <stop offset="0.60" stop-color="#FF6B1C" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#FF4D1C" stop-opacity="1.0"/>
+    </linearGradient>
+    <linearGradient id="rayRed" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FF3D3D" stop-opacity="0.0"/>
+      <stop offset="0.25" stop-color="#FF3D3D" stop-opacity="0.55"/>
+      <stop offset="0.60" stop-color="#FF2020" stop-opacity="0.90"/>
+      <stop offset="1" stop-color="#FF2020" stop-opacity="1.0"/>
+    </linearGradient>
+
+    <!-- Atom orbits -->
+    <filter id="orbitGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner vignette to soften rays near rim -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.70" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.90" stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.30"/>
+    </radialGradient>
+
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="11" flood-color="#000000" flood-opacity="0.30"/>
+    </filter>
+
+    <!-- Center diamond -->
+    <linearGradient id="diamond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8AA8BE" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#2A516E" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Center sphere -->
+    <radialGradient id="core" cx="35%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#E9FFFF"/>
+      <stop offset="0.25" stop-color="#6DE9FF"/>
+      <stop offset="0.65" stop-color="#18B7FF"/>
+      <stop offset="1" stop-color="#0A3E7A"/>
+    </radialGradient>
+
+    <!-- Background glow behind rays -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#FF6B2B" stop-opacity="0.85"/>
+      <stop offset="0.20" stop-color="#FF4D1C" stop-opacity="0.60"/>
+      <stop offset="0.40" stop-color="#18B7FF" stop-opacity="0.40"/>
+      <stop offset="0.65" stop-color="#18B7FF" stop-opacity="0.22"/>
+      <stop offset="0.85" stop-color="#0A3E7A" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#0A3E7A" stop-opacity="0.0"/>
+    </radialGradient>
+
+    <clipPath id="innerClip">
+      <circle cx="0" cy="0" r="218"/>
+    </clipPath>
+    <clipPath id="badgeClip">
+      <circle cx="256" cy="256" r="226"/>
+    </clipPath>
+
+    <!-- Bright outer ring to help on light/dark backgrounds -->
+    <linearGradient id="outerRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7CFFFB" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#18B7FF" stop-opacity="0.82"/>
+    </linearGradient>
+    <filter id="outerRingGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer badge -->
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="248" fill="url(#rim)"/>
+    <circle cx="256" cy="256" r="248" fill="url(#rimHighlight)"/>
+    <circle cx="256" cy="256" r="248" fill="none" stroke="#3A8EC0" stroke-opacity="0.18" stroke-width="2"/>
+    <circle cx="256" cy="256" r="232" fill="#0C2A50"/>
+    <circle cx="256" cy="256" r="228" fill="url(#bg)"/>
+    <circle cx="256" cy="256" r="228" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="4"/>
+  </g>
+
+  <!-- Rays and particles (clipped to the inner circle) -->
+  <g clip-path="url(#innerClip)" transform="translate(256 256)">
+    <!-- Background glow -->
+    <circle cx="0" cy="0" r="220" fill="url(#bgGlow)"/>
+
+    <!-- Rays -->
+    <g opacity="0.95">
+      <!-- Full starburst: 30 rays at 12° intervals -->
+      <!-- Cyan: 22w, full length. Orange: 22w, shorter. Red: 20w, shortest (core glow). -->
+      <rect x="-11" y="-218" width="22" height="218" rx="7" fill="url(#rayCyan)" transform="rotate(0)"/>
+      <rect x="-11" y="-170" width="22" height="170" rx="7" fill="url(#rayOrange)" transform="rotate(12)"/>
+      <rect x="-11" y="-218" width="22" height="218" rx="7" fill="url(#rayCyan)" transform="rotate(24)"/>
+      <rect x="-10" y="-150" width="20" height="150" rx="7" fill="url(#rayRed)" transform="rotate(36)"/>
+      <rect x="-11" y="-218" width="22" height="206" rx="7" fill="url(#rayCyan)" transform="rotate(48)"/>
+      <rect x="-11" y="-180" width="22" height="180" rx="7" fill="url(#rayOrange)" transform="rotate(60)"/>
+      <rect x="-11" y="-218" width="22" height="196" rx="7" fill="url(#rayCyan)" transform="rotate(72)"/>
+      <rect x="-11" y="-175" width="22" height="175" rx="7" fill="url(#rayOrange)" transform="rotate(84)"/>
+      <rect x="-11" y="-218" width="22" height="182" rx="7" fill="url(#rayCyan)" transform="rotate(96)"/>
+      <rect x="-10" y="-160" width="20" height="160" rx="7" fill="url(#rayRed)" transform="rotate(108)"/>
+      <rect x="-11" y="-218" width="22" height="194" rx="7" fill="url(#rayCyan)" transform="rotate(120)"/>
+      <rect x="-11" y="-185" width="22" height="185" rx="7" fill="url(#rayOrange)" transform="rotate(132)"/>
+      <rect x="-11" y="-218" width="22" height="190" rx="7" fill="url(#rayCyan)" transform="rotate(144)"/>
+      <rect x="-10" y="-145" width="20" height="145" rx="7" fill="url(#rayRed)" transform="rotate(156)"/>
+      <rect x="-11" y="-172" width="22" height="172" rx="7" fill="url(#rayOrange)" transform="rotate(168)"/>
+
+      <rect x="-11" y="-218" width="22" height="218" rx="7" fill="url(#rayCyan)" transform="rotate(180)"/>
+      <rect x="-11" y="-170" width="22" height="170" rx="7" fill="url(#rayOrange)" transform="rotate(192)"/>
+      <rect x="-11" y="-218" width="22" height="218" rx="7" fill="url(#rayCyan)" transform="rotate(204)"/>
+      <rect x="-10" y="-150" width="20" height="150" rx="7" fill="url(#rayRed)" transform="rotate(216)"/>
+      <rect x="-11" y="-218" width="22" height="206" rx="7" fill="url(#rayCyan)" transform="rotate(228)"/>
+      <rect x="-11" y="-180" width="22" height="180" rx="7" fill="url(#rayOrange)" transform="rotate(240)"/>
+      <rect x="-11" y="-218" width="22" height="196" rx="7" fill="url(#rayCyan)" transform="rotate(252)"/>
+      <rect x="-11" y="-175" width="22" height="175" rx="7" fill="url(#rayOrange)" transform="rotate(264)"/>
+      <rect x="-11" y="-218" width="22" height="182" rx="7" fill="url(#rayCyan)" transform="rotate(276)"/>
+      <rect x="-10" y="-160" width="20" height="160" rx="7" fill="url(#rayRed)" transform="rotate(288)"/>
+      <rect x="-11" y="-218" width="22" height="194" rx="7" fill="url(#rayCyan)" transform="rotate(300)"/>
+      <rect x="-11" y="-185" width="22" height="185" rx="7" fill="url(#rayOrange)" transform="rotate(312)"/>
+      <rect x="-11" y="-218" width="22" height="190" rx="7" fill="url(#rayCyan)" transform="rotate(324)"/>
+      <rect x="-10" y="-145" width="20" height="145" rx="7" fill="url(#rayRed)" transform="rotate(336)"/>
+      <rect x="-11" y="-172" width="22" height="172" rx="7" fill="url(#rayOrange)" transform="rotate(348)"/>
+    </g>
+
+    <!-- Vignette overlay -->
+    <circle cx="0" cy="0" r="218" fill="url(#vignette)"/>
+
+    <!-- Speckles -->
+    <g opacity="0.95">
+      <!-- Large white stars -->
+      <circle cx="-176" cy="-96" r="12" fill="#FFFFFF" fill-opacity="0.92"/>
+      <circle cx="170" cy="-84" r="11" fill="#FFFFFF" fill-opacity="0.88"/>
+      <circle cx="-22" cy="-182" r="10" fill="#FFFFFF" fill-opacity="0.82"/>
+      <!-- Cyan particles -->
+      <circle cx="184" cy="6" r="11" fill="#7CFFFB" fill-opacity="0.95"/>
+      <circle cx="-186" cy="22" r="11" fill="#18B7FF" fill-opacity="0.95"/>
+      <circle cx="54" cy="-198" r="9" fill="#7CFFFB" fill-opacity="0.90"/>
+      <circle cx="-110" cy="-165" r="8" fill="#7CFFFB" fill-opacity="0.80"/>
+      <circle cx="130" cy="-160" r="7" fill="#18B7FF" fill-opacity="0.78"/>
+      <!-- Warm particles -->
+      <circle cx="-144" cy="146" r="11" fill="#FFD166" fill-opacity="0.95"/>
+      <circle cx="146" cy="142" r="11" fill="#FF4D1C" fill-opacity="0.92"/>
+      <circle cx="195" cy="-48" r="8" fill="#FFD166" fill-opacity="0.85"/>
+      <circle cx="-196" cy="-52" r="7" fill="#FF8C33" fill-opacity="0.80"/>
+      <!-- Small dust -->
+      <circle cx="-48" cy="198" r="7" fill="#FFFFFF" fill-opacity="0.68"/>
+      <circle cx="88" cy="185" r="7" fill="#FFFFFF" fill-opacity="0.62"/>
+      <circle cx="-88" cy="-190" r="6" fill="#FFFFFF" fill-opacity="0.58"/>
+      <circle cx="200" cy="72" r="7" fill="#FFFFFF" fill-opacity="0.55"/>
+      <circle cx="-170" cy="110" r="7" fill="#7CFFFB" fill-opacity="0.68"/>
+      <circle cx="165" cy="120" r="6" fill="#FFD166" fill-opacity="0.62"/>
+    </g>
+  </g>
+
+  <!-- Atom symbol -->
+  <g clip-path="url(#badgeClip)">
+  <g filter="url(#orbitGlow)">
+    <!-- Orbit paths -->
+    <g fill="none" stroke="#FFFFFF" stroke-opacity="0.97" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="256" cy="256" rx="160" ry="66"/>
+      <ellipse cx="256" cy="256" rx="160" ry="66" transform="rotate(60 256 256)"/>
+      <ellipse cx="256" cy="256" rx="160" ry="66" transform="rotate(-60 256 256)"/>
+    </g>
+
+    <!-- Center diamond -->
+    <rect x="212" y="212" width="88" height="88" rx="12" fill="url(#diamond)" transform="rotate(45 256 256)" opacity="0.92"/>
+    <rect x="212" y="212" width="88" height="88" rx="12" fill="none" stroke="#000000" stroke-opacity="0.22" stroke-width="4" transform="rotate(45 256 256)"/>
+
+    <!-- Center sphere -->
+    <circle cx="256" cy="256" r="34" fill="url(#core)"/>
+    <circle cx="256" cy="256" r="34" fill="none" stroke="#001326" stroke-opacity="0.65" stroke-width="6"/>
+    <circle cx="244" cy="244" r="10" fill="#FFFFFF" fill-opacity="0.65"/>
+  </g>
+  </g>
+
+  <!-- Rim highlights -->
+  <circle cx="256" cy="256" r="248" fill="none" stroke="url(#outerRing)" stroke-opacity="0.90" stroke-width="4.5" filter="url(#outerRingGlow)"/>
+  <circle cx="256" cy="256" r="247" fill="none" stroke="#5AAFE0" stroke-opacity="0.12" stroke-width="1.5"/>
+  <circle cx="256" cy="256" r="242" fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="4"/>
+  <circle cx="256" cy="256" r="233" fill="none" stroke="#0B2A3D" stroke-opacity="0.70" stroke-width="3"/>
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#0B2A3D" stroke-opacity="0.55" stroke-width="8"/>
+</svg>

@@ -1,0 +1,7 @@
+home:
+#  - {path: readme.md, title: "<i class='bi bi-house-door' aria-hidden='true'></i> Home"}
+#  - {url: "#projects", title: "<i class='bi bi-grid-3x3-gap' aria-hidden='true'></i> Projects"}
+#  - {url: "#ecosystem", title: "<i class='bi bi-diagram-3' aria-hidden='true'></i> Ecosystem"}
+
+home2:
+  - {url: "https://github.com/XenoAtom/", title: '<i class="bi bi-github"></i> GitHub Org', link_class: btn btn-info}
