@@ -21,11 +21,11 @@ og_type: website
 </section>
 
 <section id="ecosystem" class="container my-5">
-  <h2 class="display-6 mb-4"><i class="bi bi-signpost-2 xenoatom-feature-icon xenoatom-icon--layout"></i>Active Documentation Sites</h2>
+  <h2 class="display-6 mb-4"><i class="bi bi-signpost-2 lunet-feature-icon lunet-icon--layout"></i>Active Documentation Sites</h2>
   <div class="row row-cols-1 row-cols-lg-3 gx-4 gy-4">
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h5"><i class="bi bi-display xenoatom-feature-icon xenoatom-icon--controls"></i> XenoAtom.Terminal.UI</div>
+        <div class="card-header h5"><i class="bi bi-display lunet-feature-icon lunet-icon--controls"></i> XenoAtom.Terminal.UI</div>
         <div class="card-body">
           <p class="mb-2">Reactive retained-mode terminal UI framework for .NET.</p>
           <p class="mb-0"><a href="https://xenoatom.github.io/terminal/">Docs</a> · <a href="https://github.com/XenoAtom/XenoAtom.Terminal.UI">GitHub</a></p>
@@ -34,7 +34,7 @@ og_type: website
     </div>
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h5"><i class="bi bi-journal-text xenoatom-feature-icon xenoatom-icon--debug"></i> XenoAtom.Logging</div>
+        <div class="card-header h5"><i class="bi bi-journal-text lunet-feature-icon lunet-icon--debug"></i> XenoAtom.Logging</div>
         <div class="card-body">
           <p class="mb-2">High-performance structured logging for .NET and terminal UIs.</p>
           <p class="mb-0"><a href="https://xenoatom.github.io/logging/">Docs</a> · <a href="https://github.com/XenoAtom/XenoAtom.Logging">GitHub</a></p>
@@ -43,7 +43,7 @@ og_type: website
     </div>
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h5"><i class="bi bi-terminal xenoatom-feature-icon xenoatom-icon--input"></i> XenoAtom.CommandLine</div>
+        <div class="card-header h5"><i class="bi bi-terminal lunet-feature-icon lunet-icon--input"></i> XenoAtom.CommandLine</div>
         <div class="card-body">
           <p class="mb-2">Composition-first command-line parser with NativeAOT support.</p>
           <p class="mb-0"><a href="https://xenoatom.github.io/commandline/">Docs</a> · <a href="https://github.com/XenoAtom/XenoAtom.CommandLine">GitHub</a></p>
@@ -54,11 +54,11 @@ og_type: website
 </section>
 
 <section id="projects" class="container my-5">
-  <h2 class="display-6 mb-4"><i class="bi bi-collection xenoatom-feature-icon xenoatom-icon--themes"></i>Project Index</h2>
+  <h2 class="display-6 mb-4"><i class="bi bi-collection lunet-feature-icon lunet-icon--themes"></i>Project Index</h2>
   <div class="row row-cols-1 row-cols-lg-2 gx-4 gy-4">
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h4"><i class="bi bi-terminal xenoatom-feature-icon xenoatom-icon--input"></i> Terminal and CLI Foundations</div>
+        <div class="card-header h4"><i class="bi bi-terminal lunet-feature-icon lunet-icon--input"></i> Terminal and CLI Foundations</div>
         <div class="card-body">
           <ul class="mb-0">
             <li><a href="https://xenoatom.github.io/terminal/">XenoAtom.Terminal.UI docs</a> · <a href="https://github.com/XenoAtom/XenoAtom.Terminal.UI">GitHub</a></li>
@@ -71,7 +71,7 @@ og_type: website
     </div>
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h4"><i class="bi bi-journal-text xenoatom-feature-icon xenoatom-icon--debug"></i> Logging and Observability</div>
+        <div class="card-header h4"><i class="bi bi-journal-text lunet-feature-icon lunet-icon--debug"></i> Logging and Observability</div>
         <div class="card-body">
           <ul class="mb-0">
             <li><a href="https://xenoatom.github.io/logging/">XenoAtom.Logging docs</a> · <a href="https://github.com/XenoAtom/XenoAtom.Logging">GitHub</a></li>
@@ -81,7 +81,7 @@ og_type: website
     </div>
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h4"><i class="bi bi-cpu xenoatom-feature-icon xenoatom-icon--layout"></i> Runtime and Systems Foundations</div>
+        <div class="card-header h4"><i class="bi bi-cpu lunet-feature-icon lunet-icon--layout"></i> Runtime and Systems Foundations</div>
         <div class="card-body">
           <ul class="mb-0">
             <li><a href="https://github.com/XenoAtom/XenoAtom.Allocators">XenoAtom.Allocators</a></li>
@@ -94,7 +94,7 @@ og_type: website
     </div>
     <div class="col">
       <div class="card h-100">
-        <div class="card-header h4"><i class="bi bi-gpu-card xenoatom-feature-icon xenoatom-icon--controls"></i> Graphics and Toolchain</div>
+        <div class="card-header h4"><i class="bi bi-gpu-card lunet-feature-icon lunet-icon--controls"></i> Graphics and Toolchain</div>
         <div class="card-body">
           <ul class="mb-0">
             <li><a href="https://github.com/XenoAtom/XenoAtom.Graphics">XenoAtom.Graphics</a></li>
